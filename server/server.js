@@ -29,19 +29,10 @@ const PORT = process.env.PORT || 5000;
 app.use(
   cors({
     origin: "https://shopify-beryl-kappa.vercel.app",
-    methods: ["GET", "POST", "DELETE", "PUT"],
-    allowedHeaders: [
-      "Content-Type",
-      "Authorization",
-      "Access-Control-Allow-Methods",
-      "Access-Control-Request-Headers",
-      "Cache-Control",
-      "Expires",
-      "Pragma",
-    ],
     credentials: true,
   }),
 );
+
 
 app.use(cookieParser());
 app.use(express.json());
